@@ -151,23 +151,23 @@ START_TEST(test_2d_area_triangle)
     coord_2d_t b;
     coord_2d_t c;
 
-    a.x = 3;
-    a.y = 2;
-    b.x = 2;
-    b.y = 9;
-    c.x = 9;
+    a.x = 31;
+    a.y = 20;
+    b.x = 26;
+    b.y = 35;
+    c.x = 50;
+    c.y = 25;
+
+    ck_assert(coord_2d_area_triangle(&a, &b, &c) == 155.0);
+
+    a.x = 7;
+    a.y = 10;
+    b.x = 4;
+    b.y = 11;
+    c.x = 6;
     c.y = 8;
 
-    ck_assert(coord_2d_area_triangle(&a, &b, &c) == 24.0);
-
-    a.x = 3;
-    a.y = 6;
-    b.x = 6;
-    b.y = 10;
-    c.x = 10;
-    c.y = 5;
-
-    ck_assert(coord_2d_area_triangle(&a, &b, &c) == 15.5);
+    ck_assert(coord_2d_area_triangle(&a, &b, &c) == 3.5);
 }
 END_TEST
 
